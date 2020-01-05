@@ -35,6 +35,14 @@ html.transition *:after{
   transition-delay: 0 !important;
 }
 
+html, body, main{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 body{
     background: var(--background);
   }
@@ -117,18 +125,16 @@ nav ul{
   height: 100%;
     display: grid;
     grid-template-columns: 2rem 1fr 1fr 2rem;
-    grid-template-rows: 10% 60% 20%;
+    grid-template-rows: 10% 60%;
     grid-template-areas: 
         ".  nav nav ."
-        ". left left ."
-        ". right right ." ;
+        ". left left .";
 }
 
 .home-container .content {
     grid-area: left;
     align-self: center;
     font-family: "Montserrat", sans-serif; 
-    transform: translateY(27%);
 }
 
 .home-container .content h1{
