@@ -1,0 +1,231 @@
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after{
+  transition: all 1000ms !important;
+  transition-delay: 0 !important;
+}
+
+
+html, body, main{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--background);
+}
+
+.icon{
+    display: none;
+}
+
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+nav h1{
+    font-family: Cellestial, sans-serif;
+    font-size: 2rem;
+    color: var(--accent);
+    user-select: none;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    float: left;
+    margin-left: 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--accent);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding: 8px 24px;
+    border-radius: 4px;
+}
+
+nav ul a.active{
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.16);
+}
+
+/* Home Container Styles */
+.home-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 6.25rem 1fr 1fr 6.25rem;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 
+        ". nav nav ."
+        ". left right ." ;
+}
+
+.home-container .content {
+    grid-area: left;
+    align-self: center;
+    font-family: "Montserrat", sans-serif;
+    transform: translateY(-10%);
+}
+
+.home-container .content h1,p{
+    margin: 0;
+    padding: 0;
+}
+
+.home-container .content .overtext{
+    color: var(--dark-grey);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.home-container .content h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.home-container .content h1 span{
+    color: var(--accent);
+}
+
+.home-container .content .subtext{
+    color: var(--secondary);
+    font-size: 1.75rem;
+    width: 70%;
+    margin-bottom: 50px;
+}
+
+.button-container{
+    margin: 0;
+    padding: 0;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.home-container .content .button{
+    display: inline-block;
+    background: #f00;
+    padding: 15px 0px;   
+    max-width: 200px;
+    min-width: 100px;
+    width: 100%;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.25rem;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.16);
+}
+
+.home-container .content .primary{
+    background: var(--accent);
+    color: #fff;
+}
+
+.home-container .content .secondary{
+    background: var(--light-grey);
+    color: #05302C;;
+    margin-left: 2rem;
+}
+
+
+.home-container .background{
+    grid-area: right;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-bottom: 6.25em;
+}
+
+.work-container{
+    height: 500px;
+    background: #05302C;
+    position: fixed;
+}
+
+.theme-switcher{
+    background: var(--switcher);
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    right: -70px;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 6px;
+    box-sizing: border-box;
+    color: #fff;
+    border-radius: 100px 0px 0px 100px;
+    transition: .2s;
+}
+
+.theme-switcher i{
+    font-size: 30px;
+}
+
+.theme-switcher:hover{
+    right: 0;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+    visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 48px;
+	height: 20px;
+	background: #ababab;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--accent);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 15px;
+}

@@ -1,0 +1,41 @@
+svg{
+  width: 650px;
+}
+
+#dos{
+  transform: translateY(70px) translateX(-5px);
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+#tres{
+  transform: translateY(105px) translateX(525px);
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+#uno{
+  fill: var(--uno);
+}
+#dos{
+  fill: var(--dos);
+}
+#tres{
+  fill: var(--tres);
+}
+
+@keyframes animateIllustration3{
+  to{
+    transform: translateY(-30px) translateX(525px);
+  }
+}
+
+@keyframes animateIllustration2{
+  to{
+    transform: translateX(0) translateY(0);
+  }
+}
