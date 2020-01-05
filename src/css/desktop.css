@@ -1,3 +1,7 @@
+html{
+    font-size: 16px;
+}
+
 html.transition,
 html.transition *,
 html.transition *:before,
@@ -39,6 +43,7 @@ nav h1{
 }
 
 nav ul{
+    display: block;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -70,7 +75,7 @@ nav ul a.active{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 6.25rem 1fr 1fr 6.25rem;
+    grid-template-columns: 6.25rem 9fr 1fr 6.25rem;
     grid-template-rows: 10% 90%;
     grid-template-areas: 
         ". nav nav ."
@@ -113,39 +118,7 @@ nav ul a.active{
     margin-bottom: 50px;
 }
 
-.button-container{
-    margin: 0;
-    padding: 0;
-    max-width: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-
-.home-container .content .button{
-    display: inline-block;
-    background: #f00;
-    padding: 15px 0px;   
-    max-width: 200px;
-    min-width: 100px;
-    width: 100%;
-    text-decoration: none;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 1.25rem;
-    border-radius: 4px;
-    box-shadow: 0px 2px 2px rgba(0,0,0,0.16);
-}
-
-.home-container .content .primary{
-    background: var(--accent);
-    color: #fff;
-}
-
 .home-container .content .secondary{
-    background: var(--light-grey);
-    color: #05302C;;
     margin-left: 2rem;
 }
 
@@ -154,7 +127,12 @@ nav ul a.active{
     grid-area: right;
     align-self: flex-end;
     justify-self: flex-end;
-    margin-bottom: 6.25em;
+    margin-bottom: 2em;
+}
+
+.background svg{
+    height: 400px;
+    position: relative;
 }
 
 .work-container{
