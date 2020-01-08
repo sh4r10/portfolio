@@ -20,6 +20,18 @@ window.onload = function () {
             document.documentElement.setAttribute("data-theme", "light");
         }
     })
+
+    var checkbox2 = document.querySelector('#switch2');
+    checkbox2.addEventListener("change", function () {
+        if (this.checked) {
+            trans()
+            document.documentElement.setAttribute("data-theme", "dark");
+        }
+        else {
+            trans()
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+    })
     
     let trans = () => {
         document.documentElement.classList.add('transition');
@@ -32,10 +44,12 @@ window.onload = function () {
         if(x.matches){
             document.documentElement.setAttribute("data-theme", "dark");
             document.getElementById("switch").checked="true";
+            document.getElementById("switch2").checked="true";
         }
         else{
             document.documentElement.setAttribute("data-theme", "light");
             document.getElementById("switch").checked = "false";
+            document.getElementById("switch2").checked = "false";
         }
     }
 
